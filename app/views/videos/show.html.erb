@@ -1,0 +1,23 @@
+
+<%= render 'videos/player' %>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      
+      <div class="description">
+        <%= @video.description.html_safe %>  
+      </div>
+
+      <div class="bg-light">
+        <%= render 'videos/comments' %>
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <%= render 'videos/relatedvideos' %>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,26 @@
+<div class="container page">
+
+<div class="page_header">
+  <div class="left">
+  <h1 class="page_title">Pages </h1>
+  </div>
+  <div class="right tar">
+    <button class="btn btn-primary">New Page</button>
+  </div>
+  <%#= link_to 'New Page', new_page_path %> 
+</div>
+
+<div class="custom-table">
+<% @pages.each do |page| %>
+  <div class="list_item">
+    <div class="left"><%= page.title %></div>
+    <div class="right"><%= link_to 'Show', page %> |
+      <%= link_to 'Edit', edit_page_path(page) %> |
+      <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+<% end %>
+</div>
+
+
+
+</div>

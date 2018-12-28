@@ -1,0 +1,31 @@
+<div class="page_slider">
+
+</div>
+
+
+<div class="continue_watching">
+  <div class="container">
+    <% if !@videos.blank? %>
+    <strong>Videos being watched</strong> <br><br>
+      <% for video in @videos %>
+        <div class="video_prev">
+            <a href="<%= video_path(video)%>">
+              <div class="cover_bg" style=" background-image: url(<%= video.media(:thumb) %>)">
+              <div class="duration"><%= Time.at(video.duration.to_i).strftime("%M:%S") %></div>
+              </div>
+              <h5><%= video.title %></h5>
+          </a>
+        </div>
+
+      <% end %>
+
+    <% else %>
+      <div class="box_no_videos"></div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="container">
+  <strong>Trailer</strong> <br><br>
+</div>

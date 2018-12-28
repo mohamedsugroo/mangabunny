@@ -1,0 +1,159 @@
+#video-id {
+	width: 100%;
+	height: auto;
+}
+
+#video-idcontext_option_homepage {
+	display: none !important;
+}
+
+
+.signin-avatar {
+	width: 35px;
+	height: 35px;
+	background: #f1f1f1;
+	border-radius: 100%;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.btn_item, .btn_item {
+	display: none;
+}
+
+.videos_nav {
+    background: black !important;
+    box-shadow: 0px 5px 42px 0px rgba(0, 0, 0, 0.11) !important;
+    color: white !important;
+
+    .signin-avatar {
+    	background: #272727;
+    }
+
+	.searchInput {
+	    width: 30%;
+	    margin-left: 20px;
+	    padding: 7px;
+	    margin-top: 2px;
+	    border-radius: 5px;
+	    border: 1px solid #171717;
+	    outline: none;
+	    padding-left: 26px;
+	    background: #272727;
+	    color: #d2d2d2;
+	}
+}
+
+.video_container_large {
+	background: black;
+	padding: 12px;
+	color: white;
+	padding-bottom: 40px;
+
+	#video-player {
+		width: 100%;
+	}
+
+	small.pdate {
+		font-size: 80%;
+	    color: #7b7b7b;
+	}
+
+	.category {
+		background: red;
+	    padding: 4px;
+	    font-size: .9rem;
+	    margin-left: 20px;
+	    font-weight: 600;
+	    color: white;
+	}
+
+	.title {
+		font-weight: 300;
+	}
+}
+
+.description {
+	padding: 12px;
+	font-weight: 400;
+	margin-top: 30px;
+	border: 1px solid #f1f1f1;
+    box-shadow: 0px 5px 42px 0px rgba(0, 0, 0, 0.11) !important;
+	padding: 20px;
+	padding-top: 40px;
+    color: #2f2f2f;
+    margin-bottom: 30px;
+}
+
+.advert_space_360 {
+	width: 100%;
+	height: 300px;
+	background: gray;
+	margin-top: 30px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.no_related_videos {
+	background: white;
+    box-shadow: 0px 5px 42px 0px rgba(0, 0, 0, 0.11);
+    padding: 20px;
+    text-align: center;
+}
+
+.related_videos {
+    margin-bottom: 30px;
+    float: middle;
+    padding: 0;
+
+    a {
+    	text-decoration: none;
+    	color: inherit;
+    	&:hover {
+    		text-decoration: none;
+    	color: inherit;
+    	}
+    }
+	.video_item {
+		background: white;
+		margin-bottom: 10px;
+	    box-shadow: 0px 5px 42px 0px rgba(0, 0, 0, 0.11);
+		.play_overlay {
+			width: 130px;
+			min-height: 100px;
+			height: 100%;
+			// background: red;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			.item_duration {
+				background: #000000ba;
+				color: white;
+				float: left;
+				padding: 6px;
+				margin: 4px;
+				border-radius: 3px;
+			}
+		}
+
+	}
+
+	.item_info {
+		// background: red;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-weight: 400;
+		small {
+			font-weight: 300;
+		}
+	}
+
+}
+
+
+
+@media screen and (max-width: 990px) {}
+
+@media screen and (max-width: 580px) {}

@@ -1,0 +1,95 @@
+<div class="new_comment">
+	<!-- (video, post, user_id, video_id, post_id, body, reply, reply_to) -->
+	<input type="hidden" id="video" value="true">
+	<input type="hidden" id="video_id" value="<%= @video.id%>">
+	<input type="hidden" id="user_id" value="<%= @video.id%>">
+	<input type="hidden" id="post" value="false">
+	<input type="hidden" id="post_id" value="">
+	<input type="hidden" id="reply" value="false">
+	<input type="hidden" id="reply_to" value="">
+
+
+	<textarea class="comment_box" id="body"
+			  placeholder="Leave a comment and join the discussion"
+			  ></textarea>
+	<div class="info-wrapper">
+		<button class="submitComment btn btn-primary-comment">Post Comment</button>
+		<div class="current_user">
+			<img class="current_avatar"
+				 src="<%= @video.media.url(:thumb) %>" 
+				 alt="<%= @video.title %>"
+				>
+			<h5 class="current_name">Mohamed Ahmed</h5>
+		</div>
+	</div>
+
+	<div class="comment_media">
+		<div class="comment">
+			<div class="row">
+				<div class="col-md-1 pt5">
+					<img class="comment_avatar" src="<%= @video.media.url(:thumb) %>" alt="Generic placeholder image">
+				</div>
+				<div class="col">
+					<div class="media-body p-2">
+					    <h4 class="mt-0">
+						    Media heading <br>
+						    <small class="time_ago">
+						    	<%= time_ago_in_words(@video.created_at) + ' ago' %>	
+					    	</small>
+						</h4>
+					    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+					  </div>
+					  <button class="btn btn-reply">Reply</button>
+				</div>
+			</div>
+		 
+		</div>
+
+		<div class="comment">
+			<div class="row">
+				<div class="col-md-1 pt5">
+					<img class="comment_avatar" src="<%= @video.media.url(:thumb) %>" alt="Generic placeholder image">
+				</div>
+				<div class="col">
+					<div class="media-body p-2">
+					    <h4 class="mt-0">
+						    Media heading <br>
+						    <small class="time_ago">
+						    	<%= time_ago_in_words(@video.created_at) + ' ago' %>	
+					    	</small>
+						</h4>
+					    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+					  </div>
+					  <button class="btn btn-reply">Reply</button>
+				</div>
+			</div>
+		 
+		</div>
+
+		<div class="comment">
+			<div class="row">
+				<div class="col-md-1 pt5">
+					<img class="comment_avatar" src="<%= @video.media.url(:thumb) %>" alt="Generic placeholder image">
+				</div>
+				<div class="col">
+					<div class="media-body p-2">
+					    <h4 class="mt-0">
+						    Media heading <br>
+						    <small class="time_ago">
+						    	<%= time_ago_in_words(@video.created_at) + ' ago' %>	
+					    	</small>
+						</h4>
+					    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+					  </div>
+					  <button class="btn btn-reply">Reply</button>
+				</div>
+			</div>
+		 
+		</div>
+	</div>
+
+</div>
+

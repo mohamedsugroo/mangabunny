@@ -1,0 +1,38 @@
+<div class="advert_space_360"></div>
+<div class="related_videos">
+	<% if !@videos.blank? %>
+		<% for video in @videos %>
+			<a href="<%= video_path(video) %>">
+				<div class="video_item">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="play_overlay" style="background-image: url('<%= video.media.url(:thumb)%>');">
+								<div class="item_duration">
+									<%= Time.at(video.duration.to_i).strftime("%M:%S") %>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<h3 class="item_info">
+								<%= truncate(video.title, length: 30) %> <br>
+								<small class="timers">
+									<%= time_ago_in_words(video.created_at) + ' ' + 'ago' %>
+								</small>
+							</h3>
+						</div>
+					</div>
+					
+				</div>
+			</a>
+		<% end %>
+	<% else %>
+		<div class="no_related_videos">
+			<div class="jumbotron">
+			  <h1 class="display-4">Ooops!</h1>
+			  <p class="lead">This is embaresing we cant seem to find any related video.</p>
+			  <br><br>
+			</div>
+		</div>
+	<% end %>
+		
+</div>

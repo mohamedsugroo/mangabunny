@@ -1,0 +1,32 @@
+<div id="navbar" 
+
+<% url = request.path_info %>
+
+<% if url.include?('/videos/') %>
+  class="videos_nav" 
+<% end %>
+
+<% if current_page?(controller: 'videos', action: 'index') %>
+  class="videos_nav" 
+<% end %>
+
+>
+
+      <div class="container">
+        <button class="mobileMenu_midlev" name="mobile">
+          
+        </button>
+        <a class="logo_item" href="<%= root_path %>"> マンガバニー </a>
+        <a class="link_item" href="<%= videos_path %>">Videos</a>
+        <a class="link_item" href="<%= root_path %>">News</a>
+        <input type="text" name="search" placeholder="search ... " class="searchInput">
+        <div class="right-nav">
+          <button type="button" class="signin-avatar"></button>
+          <button class="btn_item btn_signin">Sign In</button>
+          <button class="btn_item btn_signup" >Sign Up</button>
+        </div>
+        <button type="button" name="mobile" class="mobileMenu"></button>
+      </div>
+
+    </div>
+  </div>

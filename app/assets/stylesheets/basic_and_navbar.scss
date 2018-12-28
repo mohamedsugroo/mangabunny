@@ -1,0 +1,234 @@
+@import 'colors';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.formControls {
+  width: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  &:focus {
+    border: 1px solid $color-primary;
+  }
+}
+
+.searchInput {
+  width: 30%;
+  margin-left: 20px;
+  padding: 7px;
+  margin-top: 2px;
+  // border-radius: 50px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  padding-left: 26px;
+  font-size: 0.95rem;
+
+  &:focus {
+    border: 1px solid $color-primary;
+  }
+}
+
+#navbar {
+  padding: 5px;
+  margin: 0px;
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: 1000;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 5px 42px 0px rgba(0, 0, 0, 0.11);
+  color: $nav-text-color;
+  transition: all .3s ease;
+
+  a {
+
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .router-link-exact-active {
+    color: $color-primary;
+  }
+
+
+  .logo_item{
+    font-weight: 900;
+  }
+
+  .right-nav {
+    // background: green;
+    float: right;
+  }
+
+  .link_item {
+    padding: 12px;
+    // background: blue;
+    margin-left: 3px;
+  }
+  .btn_item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: transparent;
+    margin-left: 6px;
+    padding: 6px;
+    border: none;
+    // border-radius: 50px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .btn_signin {
+    // background: $color-light;
+    // color: white;
+  }
+  .btn_signup {
+    background: $color-primary;
+    color: white;
+  }
+
+  .mobileMenu_midlev {
+    display: none;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 9px;
+    border: none;
+    background: none;
+    background-image: url('https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png');
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+
+  .mobileMenu{
+    /* on click show site menu */
+    background: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 12px;
+    float: right;
+    border-radius: 100%;
+    display: none;
+    background-image: url('https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png');
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.wrapper {
+  margin-top: 46px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  // overflow: hidden;
+  // overflow-wrap: break-word;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// screens
+
+// large screen
+
+// medium screen
+@media screen and (max-width: 990px) {
+  #navbar {
+
+    .container {
+      width: 98%;
+    }
+
+    .link_item{
+      /* remove it */
+      display: none;
+    }
+
+    .mobileMenu_midlev{
+      display: block;
+    }
+    .right-nav {
+      padding-right: 20px;
+    }
+
+    .btn_item {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+  }
+
+}
+
+// smallest screen
+@media screen and (max-width: 580px) {
+
+  .container {
+    width: 96%;
+  }
+
+  #navbar {
+    padding: 5px;
+    margin: 0px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.11);
+    color: $nav-text-color;
+
+    .mobileMenu{
+      display: block;
+    }
+
+    .mobileMenu_midlev {
+      display: none;
+    }
+
+    .router-link-exact-active {
+      color: $color-primary;
+    }
+
+
+    .logo_item{
+      font-weight: 900;
+    }
+
+    .right-nav {
+      // background: green;
+      float: right;
+      display: none;
+      padding-right: 20px;
+    }
+
+    .link_item {
+      padding: 12px;
+      // background: blue;
+      margin-left: 3px;
+      display: none;
+    }
+  }
+}

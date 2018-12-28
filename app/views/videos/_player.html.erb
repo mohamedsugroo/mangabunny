@@ -1,0 +1,66 @@
+<div class="video_container_large">
+    <div class="container">
+        <h2 class="title">
+            <%= @video.title %> <br>
+            <small class="pdate">
+                Uploaded on | <%= time_ago_in_words(@video.created_at) %>
+                <span class="category">Trailer</span>
+            </small>
+        </h2>
+
+        <video id="video-player">
+            <source data-fluid-hd src='<%= @video.media.url(:original) %>' title='1080p' type='video/mp4' />
+            <source src="<%= @video.media.url(:original) %>" type="video/mp4"/>
+                <source src="<%= @video.media.url(:medium)  %>" type="video/mp4"/>
+        </video>
+        
+    </div>
+</div>
+
+<script> 
+
+let videoPlayer = fluidPlayer("video-player", {
+    layoutControls: {
+        autoPlay: true,
+        allowTheatre: false
+    },
+    vastOptions: {
+        adCTAText: 'マンガバニー ',
+        adCTATextPosition: 'top left',
+        showProgressbarMarkers: true,
+        // adList: [
+        //         {
+        //             "roll": "preRoll",
+        //             "vastTag": "https://syndication.exdynsrv.com/splash.php?idzone=3224803"
+        //         },
+        //         {
+        //             "roll": "midRoll",
+        //             "vastTag": "https://syndication.exoclick.com/splash.php?idzone=3224803",
+        //             "timer": 8
+        //         },
+        //         {
+        //             "roll": "midRoll",
+        //             "vastTag": "https://syndication.exoclick.com/splash.php?idzone=3224803",
+        //             "timer": 8
+        //         },
+        //         {
+        //             "roll": "midRoll",
+        //             "vastTag": "https://syndication.exoclick.com/splash.php?idzone=3224803",
+        //             "timer": 8
+        //         },
+        //         {
+        //             "roll": "midRoll",
+        //             "vastTag": "https://syndication.exoclick.com/splash.php?idzone=3224803",
+        //             "timer": 10
+        //         },
+        //         {
+        //             "roll": "postRoll",
+        //             "vastTag": "https://syndication.exoclick.com/splash.php?idzone=3224803"
+        //         }
+        //     ]
+    }
+    }
+); 
+
+
+</script>

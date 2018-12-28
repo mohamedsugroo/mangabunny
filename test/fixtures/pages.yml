@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  legal: false
+  normal_page: false
+  add_to_footer: false
+  add_to_sidemenu: false
+
+two:
+  title: MyString
+  content: MyText
+  legal: false
+  normal_page: false
+  add_to_footer: false
+  add_to_sidemenu: false

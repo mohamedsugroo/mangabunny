@@ -1,0 +1,60 @@
+<%= form_with(model: page, local: true) do |form| %>
+  <% if page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mainContent">
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'formControls title-input' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content %>
+      <%= form.text_area :content, class: 'formControls content-text' %>
+    </div>
+  </div>
+  <div class="sideContainer">
+    <div class="actions">
+      <%= form.submit 'Publish', class: 'btn btn-primary btn-large' %>
+    </div>
+
+    <div class="field">
+      <label>Publish Date</label>
+      <div class="fadded-text">
+        <%= Time.now.strftime("%F") %> ---  
+        <strong ><%= Time.now.strftime("%I:%M") %></strong>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :legal %>
+      <%= form.check_box :legal %>
+    </div>
+
+    <div class="field">
+      <%= form.label :normal_page %>
+      <%= form.check_box :normal_page %>
+    </div>
+
+    <div class="field">
+      <%= form.label :add_to_footer %>
+      <%= form.check_box :add_to_footer %>
+    </div>
+
+    <div class="field">
+      <%= form.label :add_to_sidemenu %>
+      <%= form.check_box :add_to_sidemenu %>
+    </div>
+
+  </div>
+<% end %>
+

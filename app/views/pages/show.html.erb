@@ -1,0 +1,37 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @page.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @page.content %>
+</p>
+
+<p>
+  <strong>Legal:</strong>
+  <%= @page.legal %>
+</p>
+
+<p>
+  <strong>Normal page:</strong>
+  <%= @page.normal_page %>
+</p>
+
+<p>
+  <strong>Add to footer:</strong>
+  <%= @page.add_to_footer %>
+</p>
+
+<p>
+  <strong>Add to sidemenu:</strong>
+  <%= @page.add_to_sidemenu %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
+
+</div>
