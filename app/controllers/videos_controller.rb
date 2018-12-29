@@ -7,6 +7,7 @@ class VideosController < ApplicationController
 
   def show
     @videos = Video.all.limit(4)
+    @comments = Comment.where(video_id: @video.id).order("created_at DESC")
   end
 
   def new

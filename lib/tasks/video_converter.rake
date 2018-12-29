@@ -22,7 +22,6 @@ namespace :video do
 				# end
 				video.update(duration: movie.duration, bitrate: movie.bitrate, size: movie.size, video_stream: movie.video_stream, video_codec: movie.video_codec, colorspace: movie.colorspace, resolution: movie.resolution, width: movie.width, height: movie.height, audio_stream: movie.audio_stream, audio_codec: movie.audio_codec, audio_sample_rate: movie.audio_sample_rate, audio_channels: movie.audio_channels)
 				# frame_rate: movie.frame_rate, audio_streams: movie.audio_streams
-
 			end
 		end
 	end

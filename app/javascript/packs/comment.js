@@ -62,9 +62,6 @@ if (comment) {
 	  });
 	}
 
-
-
-
 	btnComment.addEventListener("click", function() {
 		console.log(area.value)
 		// (video, post, user_id, video_id, post_id, body, reply, reply_to)

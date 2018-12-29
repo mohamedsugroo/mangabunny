@@ -11,3 +11,7 @@
 
 import './video.js'
 import './comment.js'
+import './app.js'
+
+
+
