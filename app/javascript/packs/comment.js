@@ -36,6 +36,7 @@ class Comment{
 
 const comment = document.querySelector('.new_comment')
 let video, post, user_id, video_id, post_id, body, reply, reply_to;
+body = ''
 if (comment) {
 	const comment_box = document.querySelector('.comment_box').value
 	const area = document.querySelector('.comment_box');
@@ -66,7 +67,14 @@ if (comment) {
 		console.log(area.value)
 		// (video, post, user_id, video_id, post_id, body, reply, reply_to)
 		const p = new Comment(video,post,user_id,video_id,post_id,body,reply,reply_to);
-		p.new_video_comment()
+		if (body.length > 1) {
+			p.new_video_comment()
+		} else {
+			alert('No Comment')
+		}
+		
+		area.value = ''
+		body = ''
 		console.log(btnComment);
 		console.log(area.value)
 	}, false);

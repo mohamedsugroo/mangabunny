@@ -4,13 +4,22 @@
 
 <% if url.include?('/videos/') %>
   class="videos_nav" 
-<% end %>
-
-<% if current_page?(controller: 'videos', action: 'index') %>
+<% elsif url.include?('/videos') %>
   class="videos_nav" 
 <% end %>
 
 >
+
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
 
       <div class="container">
         <button class="mobileMenu_midlev" name="mobile">

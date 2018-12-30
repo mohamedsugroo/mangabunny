@@ -40,7 +40,7 @@ const comment = document.querySelector('#comments')
 
 if (comment) {
 document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
+  const commenter = new Vue({
     el: '#comments',
     components: { CommentList }
   })

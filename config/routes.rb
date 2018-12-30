@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'current_user_status', to: 'current#index'
   resources :comments
   resources :videos
   resources :pages

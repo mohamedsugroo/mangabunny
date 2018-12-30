@@ -11,4 +11,5 @@ json.comments @comments.each do |comment|
 	json.reply_to comment.reply_to
 	json.post comment.post
 	json.created_at comment.created_at
+	json.time_ago comment.time_ago
 end
